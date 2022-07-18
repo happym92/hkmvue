@@ -32,15 +32,15 @@ pipeline {
         
         stage('dockerizing'){
             steps{
-                sh 'docker build -t devpgang/hkmvue .'
+                sh 'docker build -t devpgang/zzic-front .'
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'docker stop hkmvue'
-                sh 'docker rm hkmvue'
-                sh 'docker run -d -p 8092:8091 --name hkmvue devpgang/hkmvue'
+                sh 'docker stop zzic-front'
+                sh 'docker rm zzic-front'
+                sh 'docker run -d -p 8092:8091 --name zzic-front devpgang/zzic-front'
             }
 
             post {
