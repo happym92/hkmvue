@@ -38,8 +38,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-//                sh 'docker stop hkmvue'
-//                sh 'docker rm hkmvue'
+                sh 'docker stop hkmvue'
+/               sh 'docker rm hkmvue'
                 sh 'docker run -d -p 8092:8091 --name hkmvue devpgang/hkmvue'
             }
 
