@@ -40,7 +40,7 @@ pipeline {
             steps {
                 sh 'docker stop hkmvue'
                 sh 'docker rm hkmvue'
-                sh 'docker run -d -p 80:8091 --name hkmvue devpgang/hkmvue'
+                sh 'docker run -d -p 8092:8091 --name hkmvue devpgang/hkmvue'
             }
 
             post {
