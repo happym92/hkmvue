@@ -6,8 +6,8 @@ pipeline {
     }
 
     environment {
-        imagename = "hkmvueimg"
-        registryCredential = 'dochkm'
+        imagename = "zzicoyo"
+        registryCredential = 'dochkm' // 레파지토리 옮긴후 재설정
         dockerImage = ''
     }
 
@@ -16,9 +16,9 @@ pipeline {
         stage('Prepare') {
           steps {
             echo 'Clonning Repository'
-            git url: 'https://github.com/happym92/hkmvue.git',
+            git url: 'https://github.com/happym92/zzic-oyo-front.git', // 레파지토리 옮긴후 재설정
               branch: 'master',
-              credentialsId: 'githkm'
+              credentialsId: 'githkm' // 레파지토리 옮긴후 재설정
             }
             post {
              success { 
