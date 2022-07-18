@@ -19,6 +19,10 @@ npm run build
 ```
 npm run lint
 ```
+#0718
+방화벽 설정 잘못됨
+#!/bin/bash
+sudo ufw disable
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
